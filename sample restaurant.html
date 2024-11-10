@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeavenHut - Restaurant Menu</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Landing Page -->
+    <div id="landingPage">
+        <h1>HEAVENHUT</h1>
+        <button onclick="openMenu()">Open Menu</button>
+    </div>
+
+    <!-- Menu Section (Initially Hidden) -->
+    <div id="menuSection" style="display: none;">
+        <header>
+            <h2>Our Menu</h2>
+        </header>
+
+        <div class="category" onclick="showCategory('starters')">
+            <h3>Starters</h3>
+        </div>
+        <div class="category" onclick="showCategory('mainCourse')">
+            <h3>Main Course</h3>
+        </div>
+        <div class="category" onclick="showCategory('beverages')">
+            <h3>Beverages</h3>
+        </div>
+        <div class="category" onclick="showCategory('desserts')">
+            <h3>Desserts</h3>
+        </div>
+
+        <!-- Items Section -->
+        <div id="itemsSection"></div>
+    </div>
+
+
+
+<!-- Modal for Item Details -->
+ <!-- Modal for Item Details -->
+<div id="itemModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="itemImage" src="" alt="Item Image">
+        <h2 id="itemName"></h2>
+        <p><strong>Price:</strong> ₹<span id="itemPrice"></span></p>
+        <p><strong>Calories:</strong> <span id="itemCalories"></span> kcal</p>
+        <p><strong>Procedure:</strong> <span id="itemProcedure"></span></p>
+        <button id="buyButton" onclick="showQRCode()">Buy</button> <!-- Add Buy Button -->
+        <div id="qrCodeContainer" style="display: none;">
+            <img id="qrCodeImage" src="./qr scanner.png" alt="QR Code" style="margin-top: 10px;">
+        </div>
+    </div>
+</div>
+
+
+
+
+    <script src="./script.js"></script>
+</body>
+</html>
